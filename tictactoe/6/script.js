@@ -77,7 +77,7 @@ function bestSpot() {
 }
 
 function checkTie() {
-	if (emptySquares().length == 0) {
+	if (emptySquares().length == 0 && gameWon.player != huPlayer && gameWon.player != aiPlayer) {
 		for (var i = 0; i < cells.length; i++) {
 			cells[i].style.backgroundColor = "green";
 			cells[i].removeEventListener('click', turnClick, false);
